@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="section_top">
+
+        <div class="content">
+
+           <h1>Alien Portal</h1>
+
+          <form id="AlienValidationForm">
+
+        <div class="input-box">
+        <label for="planetName" class="title"><b>Planet Name:</b></label>
+        <input type="text" id="planetName" name="planetName" placeholder="Enter Planet Name" required>
+      </div>
+
+      <div class="input-box">
+        <label for="antennaCount" class="title"><b>Antenna Count:</b></label>
+        <input type="number" id="antennaCount" name="antennaCount" placeholder="Enter Antenna Count" min="0" required>
+      </div>
+
+      <div class="input-box">
+        <label for="alienId" class="title">Alien ID:</label>
+        <input type="text" id="alienId" name="alienId" 
+               placeholder="Format: ZOR-XY_9999@UFO"
+               pattern="ZOR-XY_9999@UFO" 
+               required>
+      </div>
+
+      <div class="input-box">
+        <label for="humanPhrase" class="title">Favorite Human Phrase:</label>
+        <input type="text" id="humanPhrase" name="humanPhrase" placeholder="Enter Favorite Human Phrase" required>
+      </div>
+
+      <div class="input-box">
+        <label for="landingDate" class="title">Landing Date:</label>
+        <input type="date" id="landingDate" name="landingDate" required>
+      </div>
+      <button type="submit">Register</button>
+
+    </form>
+
+        </div>
+        <div class="bubbles">
+          <img src="5.png" alt="">
+           <img src="6.png" alt="">
+            <img src="7.png" alt="">
+             <img src="8.png" alt="">
+              <img src="9.png" alt="">
+               <img src="10.png" alt="">
+    </div>
+    <div class="logo">
+
+      <img src="A.png" onclick="playSound('A1')"> 
+      <img src="L.png" onclick="playSound('L1')">
+       <img src="I.png" onclick="playSound('I1')">
+         <img src="E.png" alt="">
+        <img src="N.png" alt="">
+       
+         <img src="P.png" alt="">
+         <img src="O.png" alt="">
+         <img src="R.png" alt="">
+         <img src="T.png" alt="">
+         <img src="A.png" alt="">
+         <img src="L.png" alt="">
+         <audio id="A1" src="A.mp3"></audio>
+         <audio id="L1" src="L.mp3"></audio>
+         <audio id="I1" src="I.mp3"></audio>
+
+
+    </div>
+
+    </div>
+     <script src="script.js"></script>
+    
+</body>
+</html>
