@@ -5,3 +5,7 @@ function playSound(id) {
   sound.play();
 }
 
+// function Goto(){
+//   window.location.href= "about.html";
+// }
+
