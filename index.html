@@ -13,12 +13,13 @@
 
            <h1>Alien Portal</h1>
 
-          <form id="AlienValidationForm" action="about.html">
+          <form id="AlienValidationForm" action="gallery.html">
+<div class="input-box">
+  <label for="planetName" class="title"><b>Planet Name:</b></label>
+  <input type="text" id="planetName" name="planetName" placeholder="Enter Planet Name" list="planet-list" required>
+  <datalist id="planet-list"></datalist>
+</div>
 
-        <div class="input-box">
-        <label for="planetName" class="title"><b>Planet Name:</b></label>
-        <input type="text" id="planetName" name="planetName" placeholder="Enter Planet Name" required>
-      </div>
 
       <div class="input-box">
         <label for="antennaCount" class="title"><b>Antenna Count:</b></label>
@@ -60,18 +61,23 @@
       <img src="A.png" onclick="playSound('A1')"> 
       <img src="L.png" onclick="playSound('L1')">
        <img src="I.png" onclick="playSound('I1')">
-         <img src="E.png" alt="">
-        <img src="N.png" alt="">
+         <img src="E.png" onclick="playSound('E1')">
+        <img src="N.png" onclick="playSound('N1')">
        
-         <img src="P.png" alt="">
-         <img src="O.png" alt="">
-         <img src="R.png" alt="">
-         <img src="T.png" alt="">
-         <img src="A.png" alt="">
-         <img src="L.png" alt="">
+         <img src="P.png" onclick="playSound('P1')">
+         <img src="O.png" onclick="playSound('O1')">
+         <img src="R.png" onclick="playSound('R1')">
+         <img src="T.png" >
+         <img src="A.png" >
+         <img src="L.png"  >
          <audio id="A1" src="A.mp3"></audio>
          <audio id="L1" src="L.mp3"></audio>
          <audio id="I1" src="I.mp3"></audio>
+         <audio id="E1" src="E.mp3"></audio>
+         <audio id="N1" src="N.mp3"></audio>
+         <audio id="P1" src="P.mp3"></audio>
+         <audio id="O1" src="O.mp3"></audio>
+         <audio id="R1" src="R.mp3"></audio>
 
 
     </div>
