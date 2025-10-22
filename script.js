@@ -53,11 +53,11 @@ fetchPlanets();
 
 
  
-// === FORM VALIDATION ===
-document.getElementById("AlienValidationForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // stop form from submitting immediately
 
-  // Clear all previous error messages
+document.getElementById("AlienValidationForm").addEventListener("submit", function (e) {
+  e.preventDefault(); 
+
+
   document.querySelectorAll(".error-msg").forEach(el => el.remove());
 
   document.querySelectorAll("input").forEach(input => input.classList.remove("invalid", "valid"));

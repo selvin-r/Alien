@@ -175,7 +175,7 @@ body,html{
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #63db22; /* slightly darker shade */
+  background-color: #63db22;
   transition: all 0.3s;
   border-radius: 10rem;
   z-index: -1;
@@ -190,7 +190,11 @@ body,html{
 }
 
 
-
+/* :root{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+} */
 
 
 
@@ -205,6 +209,10 @@ body,html{
   flex-direction: column;
   /* gap: 5px; */
   z-index: 1000;
+
+  /* aspect-ratio: 1 / 1;
+  animation: 4s linear 0s infinite alternate sun-rise; */
+
 }
 
 .logo img {
@@ -309,3 +317,13 @@ body,html{
   border-radius: 10px;
 } */
 
+@keyframes sun-rise {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateY(110vh);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateY(0);
+  }
+}
