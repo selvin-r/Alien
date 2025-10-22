@@ -60,6 +60,8 @@ document.getElementById("AlienValidationForm").addEventListener("submit", functi
   // Clear all previous error messages
   document.querySelectorAll(".error-msg").forEach(el => el.remove());
 
+  document.querySelectorAll("input").forEach(input => input.classList.remove("invalid", "valid"));
+
   const planetName = document.getElementById("planetName").value.trim();
   const antennaCount = document.getElementById("antennaCount").value.trim();
   const alienId = document.getElementById("alienId").value.trim();
@@ -70,7 +72,7 @@ document.getElementById("AlienValidationForm").addEventListener("submit", functi
 
   let isValid = true;
 
-  // Helper function to show error message below input
+ 
   function showError(inputId, message) {
     const inputElement = document.getElementById(inputId);
     const errorElement = document.createElement("p");
@@ -82,42 +84,46 @@ document.getElementById("AlienValidationForm").addEventListener("submit", functi
     inputElement.insertAdjacentElement("afterend", errorElement);
   }
 
-  // 1️⃣ Planet Name: at least one vowel + one digit
+
   const planetRegex = /^(?=.*[aeiouAEIOU])(?=.*\d)[A-Za-z0-9]+$/;
   if (!planetRegex.test(planetName)) {
     showError("planetName", "👾 Must contain at least one vowel and one digit.");
     isValid = false;
   }
 
-  // 2️⃣ Antenna Count: must be even
+ 
   if (antennaCount === "" || antennaCount % 2 !== 0) {
     showError("antennaCount", "👾 Must be an even number.");
     isValid = false;
   }
 
-  // 3️⃣ Alien ID: ZOR-XY_9999@UFO format
+
   const idRegex = /^[A-Z]{3}-[A-Z]{2}_[0-9]{4}@UFO$/;
   if (!idRegex.test(alienId)) {
     showError("alienId", "👾 Format: ZOR-XY_9999@UFO.");
     isValid = false;
   }
 
-  // 4️⃣ Human Phrase: must include emoji or punctuation
+
   const phraseRegex = /[\p{Emoji}\p{Punctuation}]/u;
   if (!phraseRegex.test(humanPhrase)) {
     showError("humanPhrase", "👾 Must include at least one emoji or punctuation.");
     isValid = false;
   }
 
-  // 5️⃣ Landing Date: cannot be in the past
+
   if (landingDate < today) {
     showError("landingDate", "👾 Landing date cannot be in the past.");
     isValid = false;
   }
 
-  // ✅ If all valid, go to gallery page
-  if (isValid) {
-    alert("✅ Registration Successful! Welcome to Earth 👽🌍");
-    this.submit();
+
+if (isValid) {
+    document.querySelectorAll("input").forEach(input => input.classList.add("valid"));
+    // You can trigger a glowing effect or redirect later
+    setTimeout(() => {
+      alert("✅ Registration Successful! Welcome to Earth 👽🌍");
+      this.submit();
+    }, 500);
   }
 });

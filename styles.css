@@ -79,6 +79,38 @@ body,html{
     outline: none;
     transition: 0.3s linear;
 }
+
+.input-box input::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #4caf50;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.input-box input:focus::after {
+  width: 100%;
+}
+/* Focus underline animation */
+.input-box input:focus {
+  border-bottom: 2px solid #4caf50; /* green on focus */
+}
+
+/* Optional success underline if value passes JS check */
+.input-box input.valid {
+  border-bottom: 2px solid #00e676;
+}
+
+/* Error underline when validation fails */
+.input-box input.invalid {
+  border-bottom: 2px solid #ff5252;
+}
+
+
 .input-box input::placeholder{
     /* color: #fff; */
 }
@@ -86,7 +118,8 @@ body,html{
     border-color: beige;
     box-shadow: 0 0 10px rgb(161, 207, 222);
 }
-.content button{
+
+/* .content button{
     width: 100%;
     padding: 12px;
      border-radius: 25px;
@@ -102,7 +135,64 @@ body,html{
     background-color: rgb(184, 95, 166);
     color: #fff;
     box-shadow: 0 0 20px rgb(177, 201, 218);
+} */
+
+
+.button {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  background-color: rgb(94, 206, 66);
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+ 
 }
+
+.button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(225, 208, 206);
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #63db22; /* slightly darker shade */
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.button:hover {
+  color: #fff;
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+
+
+
+
 
 
 .logo {
@@ -218,3 +308,4 @@ body,html{
   margin: 15px;
   border-radius: 10px;
 } */
+
