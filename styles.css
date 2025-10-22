@@ -207,3 +207,8 @@ body,html{
         background-image:url("1.png");
     }
 } */
+
+
+.error-msg {
+  text-shadow: 0 0 8px red;
+}
