@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outline Buttons</title>
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* height: 100vh; */
+    }
+
+
+    .button-group {
+      display: flex;
+      gap: 16px; 
+    }
+
+
+    .btn {
+      border: 1.5px solid #10a37f;
+      color: #10a37f;
+      background: transparent;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+  
+    .btn:hover {
+      background: #10a37f;
+      color: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 480px) {
+      .button-group {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn {
+        width: 80%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- <div class="button-group">
+    <button class="btn">User guide</button>
+    <button class="btn">SDK guide</button>
+    <button class="btn">Manage</button>
+  </div> -->
+
+
+ <div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">4</div>
+  <div class="item">5</div>
+</div>
+
+</body>
+</html>

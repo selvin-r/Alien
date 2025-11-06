@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <table id="output" border="1" style="width: 100%;"></table>
+
+    
+    <script>
+
+
+// Console viwe 
+        
+// fetch("Data.json")
+//   .then(res => res.json())
+//   .then(data => {
+//     data.forEach(item => {
+//       console.log(item.name);
+//     });
+//   });
+
+
+
+// Using fetch() with an Online API
+
+//  Used to show live data (like from a database or API).
+ 
+
+
+
+ fetch("Data.json")
+ .then(response => response.json())
+.then(data => {
+
+    let table ="<tr><th>ID</th><th>Name</th><th>Email</th>";
+
+        data.forEach(element => {
+
+             table += `<tr><th>${element.id}</th><th>${element.name}</th><th>${element.email}</th></tr>`;
+            
+        });
+
+       document.getElementById("output").innerHTML=table;
+ } );
+
+//   fetch("https://api.weatherapi.com/v1/current.json?key=demo&q=London")
+//   .then(res => res.json())
+//   .then(data => console.log(data.response));
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+

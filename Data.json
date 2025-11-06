@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Darling Kumar",
+    "email": "darling.kumar@example.com",
+    "role": "Frontend Developer",
+    "location": "Chennai"
+  },
+  {
+    "id": 2,
+    "name": "Priya S",
+    "email": "priya.s@example.com",
+    "role": "UI Designer",
+    "location": "Coimbatore"
+  },
+  {
+    "id": 3,
+    "name": "Gowtham Raj",
+    "email": "gowtham.raj@example.com",
+    "role": "React Developer",
+    "location": "Madurai"
+  },
+  {
+    "id": 4,
+    "name": "Saran Kumar",
+    "email": "saran.k@example.com",
+    "role": "Backend Engineer",
+    "location": "Trichy"
+  },
+  {
+    "id": 5,
+    "name": "Latha M",
+    "email": "latha.m@example.com",
+    "role": "QA Tester",
+    "location": "Salem"
+  }
+]

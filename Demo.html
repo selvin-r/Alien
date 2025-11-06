@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Show One Identifier</title>
+</head>
+<body>
+  <h2>Display One Identifier</h2>
+
+   <fon class="identifier"></fon>
+  <span id="message"></span>
+  <h1 class="displayName"></h1>
+
+  <script>
+    const listObj = {
+      "result": "success",
+      "data": {
+        "782000002941027": {
+          "identifier": "com.zoho.inhouse.apptics",
+          "displayName": "Apptics",
+          "brand": "Apple",
+          "status": 2
+        },
+        "782000000427293": {
+          "identifier": "com.zoho.zinvoice",
+          "displayName": "Invoice",
+          "brand": "Apple",
+          "status": 2
+        }
+      }
+    };
+
+    const key = "782000002941027";
+
+    const identifier = listObj.data[key].identifier;
+    const displayName = listObj.data[key].displayName;
+    
+
+    const msg = document.getElementById("message");
+
+    document.querySelector(".identifier").textContent = identifier;
+
+    document.querySelector(".displayName").textContent = displayName;
+
+  
+    if (listObj.result === "success") {
+      msg.textContent = "Status: Success!";
+      msg.style.color = "green";
+    } else {
+      msg.textContent = "Status: Failed!";
+      msg.style.color = "red";
+    }
+  </script>
+</body>
+</html>

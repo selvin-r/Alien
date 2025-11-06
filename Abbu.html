@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Anbu </title>
+</head>
+<body>
+
+    <script>
+    // 1==================================================================
+
+
+    //     async function getuser() {
+
+    //         throw new Error("Something went wrong")
+
+    //         return 'selvin'
+            
+            
+    //     }
+
+    //     getuser().then(
+    //         (success)=>{
+    //             console.log(success)
+                
+
+    //     },
+    //    (error)=>{
+    //      console.error(error)
+         
+    //    }
+    
+    // )
+
+
+// 2=========================================================
+
+function getuserId(id){
+
+
+    return new Promise((resolve,reject)=>{
+
+        console.log("Get UserId" ,id);
+
+        setTimeout(() => {
+
+
+            resolve({id: id,name:'Selvin'})
+            
+        }, 1000);
+        
+
+    })
+}
+
+
+function getSubscriptions(userid){
+
+    return new Promise((resolve,reject)=>{
+
+        console.log("Get Subscriptions ", userid);
+
+
+        setTimeout(() => {
+
+            // resolve([ 
+
+
+            // {id:1,titile: "hoststar"},
+            // {id:2, titile: "prime"},
+            // {id:3, titile: "sunnext"},
+            // ])
+
+            reject("Some Think worng")
+            
+        }, 2000);
+        
+    })
+
+}
+
+
+function calucalate(Subscriptions){
+
+    console.log("Calucalate " , Subscriptions);
+
+    return new Promise((resolve,reject)=>{
+
+        setTimeout(() => {
+
+            resolve(Subscriptions.length*100)
+            
+        }, 3000);
+
+    })
+    
+
+}
+
+
+
+// getuserId(1).then(getSubscriptions)
+// .then(calucalate)
+// .then((cost)=>{
+
+//     console.log("Total Cost ",cost);
+    
+
+// })
+
+
+async function display() {
+
+   try {
+
+     const userid= await getuserId(1)
+    const  sub = await getSubscriptions(userid)
+    const clu = await calucalate(sub)
+
+    console.log(clu);
+    console.log("EverThink ");
+    
+   } catch (error) {
+
+ console.log(error);
+ 
+    
+   }
+    
+    
+    
+}
+
+display()
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery AJAX</title>
+</head>
+<body>
+
+    <table id="userTable">
+  <thead><tr><th>ID</th><th>Name</th><th>Email</th></tr></thead>
+  <tbody></tbody>
+</table>
+
+
+<script>
+
+    $.getJSON("Data.json", function(data) {
+  let rows = "";
+  $.each(data, function(i, item) {
+    rows += `<tr><td>${item.id}</td><td>${item.name}</td><td>${item.email}</td></tr>`;
+  });
+  $("#userTable tbody").append(rows);
+});
+
+</script>
+    
+</body>
+</html>

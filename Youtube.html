@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You tube Flex Box or Grids</title>
+    <style>
+       body{
+        background-color: antiquewhite;
+       
+
+       }
+       .container{
+         display: grid;
+     /*  grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: repeat(3, 1fr);
+
+        /* grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); */
+        /* column-gap: 20px;
+        row-gap: 20px; */
+        gap: 20px;
+
+    }
+    .para{
+        padding: 1rem;
+        background-color: rgb(16, 135, 164);
+        color: aliceblue;
+    }
+
+    .outerbox{
+        display: grid;
+        margin: 20px;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 100px 200px;
+        gap: 20px;
+        /* grid-auto-flow: column; */
+        grid-auto-rows: 200px;
+        align-items: end;
+        justify-content: stretch;
+}
+    .box{
+        background-color: cornflowerblue;
+        color: aliceblue;
+        font-size: 4rem;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+     /* .box1{
+       grid-column-start: 1;
+      grid-column-end: 3; 
+      grid-column: span 3;
+    }  */
+    /* .box2{
+       grid-row: span 2; 
+    } */
+    /* .box1{
+        justify-self: center;
+    } */
+
+
+    .layout{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+
+
+    }
+    .header{
+
+         padding: 1rem;
+        background-color: chocolate;
+        color: aliceblue;
+        grid-column: span 3;
+        height: 100px;
+
+    }
+    .sidebar1{
+        padding: 1rem;
+        background-color: aqua;
+        color: aliceblue;
+        grid-row: span 4;
+        height: 300px;
+    }
+    .main{
+        padding: 1rem;
+        background-color: burlywood;
+        color: aliceblue;
+        grid-row: span 4;
+    }
+    .sidebar2{
+        padding: 1rem;
+        background-color: aquamarine;
+        color: aliceblue;
+        grid-row: span 4;
+    }
+    .footer{
+        padding: 1rem;
+        background-color: cadetblue;
+        color: aliceblue;
+        grid-column: span 3;
+        height: 100px;
+    }
+    </style>
+</head>
+<body>
+     
+    <div class="outerbox">
+
+        <div class=" box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box">7</div>
+         <div class="box">8</div>
+          <div class="box">9</div>
+           <div class="box">10</div>
+            <div class="box">11</div>
+
+
+    </div>
+
+
+  <div class="layout">
+
+
+    <div class="header">Header</div>
+    
+    <div class="sidebar1">sidebar1</div>
+    
+    <div class="main">main</div>
+    
+    <div class="sidebar2">sidebar2</div>
+    
+    <div class="footer">footer</div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+    <div class="container">
+       <div class="para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat voluptas quia sequi at placeat vitae facilis quis laborum expedita inventore ut omnis atque hic perspiciatis libero, 
+            dolorem dolores eligendi totam.</p>
+       </div>
+           <div class="para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat voluptas quia sequi at placeat vitae facilis quis laborum expedita inventore ut omnis atque hic perspiciatis libero, 
+            dolorem dolores eligendi totam.</p>
+       </div>
+           <div class="para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat voluptas quia sequi at placeat vitae facilis quis laborum expedita inventore ut omnis atque hic perspiciatis libero, 
+            dolorem dolores eligendi totam.</p>
+       </div>
+           <div class="para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat voluptas quia sequi at placeat vitae facilis quis laborum expedita inventore ut omnis atque hic perspiciatis libero, 
+            dolorem dolores eligendi totam.</p>
+       </div>
+           <div class="para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat voluptas quia sequi at placeat vitae facilis quis laborum expedita inventore ut omnis atque hic perspiciatis libero, 
+            dolorem dolores eligendi totam.</p>
+       </div>
+           <div class="para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat voluptas quia sequi at placeat vitae facilis quis laborum expedita inventore ut omnis atque hic perspiciatis libero, 
+            dolorem dolores eligendi totam.</p>
+       </div>
+           <div class="para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat voluptas quia sequi at placeat vitae facilis quis laborum expedita inventore ut omnis atque hic perspiciatis libero, 
+            dolorem dolores eligendi totam.</p>
+       </div>
+           <div class="para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat voluptas quia sequi at placeat vitae facilis quis laborum expedita inventore ut omnis atque hic perspiciatis libero, 
+            dolorem dolores eligendi totam.</p>
+       </div>
+           <div class="para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat voluptas quia sequi at placeat vitae facilis quis laborum expedita inventore ut omnis atque hic perspiciatis libero, 
+            dolorem dolores eligendi totam.</p>
+       </div>
+           <div class="para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat voluptas quia sequi at placeat vitae facilis quis laborum expedita inventore ut omnis atque hic perspiciatis libero, 
+            dolorem dolores eligendi totam.</p>
+       </div>
+          
+    </div>
+</body>
+</html>

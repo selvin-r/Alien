@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        table {
+
+            width: 60%;
+            border-collapse: collapse;
+            border-radius: 1px solid #000;
+            margin-top: 30px auto;
+
+        }
+        th,td{
+             border: 2px solid #ccc;
+             padding: 10px;
+             text-align: center;
+        }
+        th {
+             background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Table </h1>
+
+    
+
+    <table id="UserTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>DEPT</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+
+         const users = [
+      { id: 1, name: "Darling", email: "darling@example.com",dept:"Dev" },
+      { id: 2, name: "Kumar", email: "kumar@example.com",dept:"devs" },
+      { id: 3, name: "Priya", email: "priya@example.com",dept: "devs" },
+      {id: 4, name: "selvin",email: "selvin@gmail.com",dept: "devs"},
+      {id:4,name: "ani",email: "ani@gmail.com",dept: "devs"}
+    ];
+
+
+    const tbody = document.querySelector("#UserTable tbody");
+
+
+   users.forEach(users =>{
+     const row =`<tr>
+        <td>${users.id}</td>
+        <td>${users.name}</td>
+        <td>${users.email}</td>
+        <td>${users.dept}</td>
+        </tr>`;
+        
+        tbody.innerHTML +=row;
+   });
+
+    </script>
+</body>
+</html>
