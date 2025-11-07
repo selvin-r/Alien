@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dragon Ball Characters</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: orange;
+    }
+
+    #characters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      padding: 15px;
+      width: 180px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .name {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #ff6600;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐉 Dragon Ball Characters</h1>
+  <div id="characters"></div>
+
+  <script>
+  
+    fetch('https://dragonball-api.com/api/characters')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok: ' + response.status);
+        }
+        return response.json();
+      })
+      .then(data => {
+        const container = document.getElementById('characters');
+
+    
+        data.items.forEach(character => {
+          const card = document.createElement('div');
+          card.className = 'card';
+
+          card.innerHTML = `
+            <img src="${character.image}" alt="${character.name}">
+            <div class="name">${character.name}</div>
+            <p>${character.race || ''}</p>
+          `;
+
+          container.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error('Fetch error:', error);
+        document.body.innerHTML = '<h3> Failed to load data. Try again later.</h3>';
+      });
+  </script>
+</body>
+</html>

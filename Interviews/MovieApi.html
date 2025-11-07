@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Api</title>
+    <style>
+      body{
+        background-color: rgb(244, 235, 235);
+        font-family: 'Times New Roman', Times, serif;
+      }
+      h2{
+        text-align: center;
+        color: rgb(44, 101, 152);
+      }
+      .movie-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+
+
+      }
+      .card{
+        width: 220px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: 0.3s;
+      }
+      .card img{
+        width: 100%;
+        height: 300px;
+         object-fit: cover;
+
+      }
+      .card:hover{
+        transform: scale(1.05);
+      }
+       .card .info {
+      padding: 10px;
+    }
+    .card.title{
+        font-weight: bold;
+        color: rgb(44, 101, 152);
+        font-size: 16px;
+    }
+    .card .lang {
+      color: #555;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .card .id {
+      color: gray;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+        
+    </style>
+</head>
+<body>
+
+    <h2>Movie List</h2>
+
+    <div class="movie-container"></div>
+
+    <script>
+
+
+
+   const moviecontainer =document.querySelector(".movie-container");
+
+   fetch('https://mimic-server-api.vercel.app/movies')
+   .then((res)=> res.json())
+   .then((data)=>{
+
+    
+ data.forEach(movie => {
+        
+    const card =document.createElement("div");
+
+    card.classList.add("card");
+
+
+    card.innerHTML=`
+    
+       <img src="${movie.poster_path}" alt="${movie.original_title}">
+
+       <div class="info">
+
+       <div class="title">${movie.original_title}</div>
+              <div class="lang">Language: ${movie.original_language}</div>
+              <div class="id">ID: ${movie.id}</div>
+              <div class="date">Date: ${movie.release_date}</div>
+
+
+        </div>
+    
+    `;
+      
+     moviecontainer.appendChild(card);
+      
+    });
+
+   })
+
+   .catch(err => console.error("Error fetching API:", err));
+
+    </script>
+    
+</body>
+</html>
