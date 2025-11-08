@@ -115,7 +115,7 @@ let arr = [1, 2, 3, 4, 5];
 
 
 
-// 🌟 METHOD 3 — Using stack concept (push & pop) 🧱
+// 🌟 METHOD 3 — Using stack concept (push & pop) 
 
 // function reverse(str){
 
