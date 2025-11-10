@@ -1,6 +1,6 @@
 
 
-// Example 1 — Basic Async + Await
+// Example 1 — Basic Async + Await =====================================================
 
 // async function getname() {
 
@@ -28,38 +28,38 @@
 // workProcess();
 
 
-// Example 3 — Async with Fetch API (Print Data)
+// Example 3 — Async with Fetch API (Print Data) ===========================================================================================
 
 
-// async function Printdata() {
+async function Printdata() {
 
-// try {
+try {
 
-//      const res=await fetch("https://jsonplaceholder.typicode.com/users")
+     const res=await fetch("https://jsonplaceholder.typicode.com/users")
 
-//     const data = await res.json();
+    const data = await res.json();
 
-//     data.forEach((element)=> {
-//         console.log(`User id ${element.id}`);
-//         console.log("Name",element.name)
-//         console.log("Email ",element.email);
-//         console.log("Address",element.address);
-//         console.log("Phone ",element.phone);
-//         console.log("Wibsite Name" ,element.website);
-//         console.log("Company " ,element.company)
+    data.forEach((element)=> {
+        console.log(`User id ${element.id}`);
+        console.log("Name",element.name)
+        console.log("Email ",element.email);
+        console.log("Address",element.address);
+        console.log("Phone ",element.phone);
+        console.log("Wibsite Name" ,element.website);
+        console.log("Company " ,element.company)
 
         
-//     });
+    });
 
     
-// } catch (error) {
-//     console.log(error)
-// }
+} catch (error) {
+    console.log(error)
+}
    
     
-// }
+}
 
-// Printdata() 
+Printdata() 
 
 
 
@@ -120,40 +120,40 @@
 
 //// Same Function Data 
 
-function delay(ms){
-    return new Promise(resolve => setTimeout(resolve,ms));
-}
+// function delay(ms){
+//     return new Promise(resolve => setTimeout(resolve,ms));
+// }
 
-async function GetUserData() 
-{
-   try {
+// async function GetUserData() 
+// {
+//    try {
     
-  const res =await fetch("https://jsonplaceholder.typicode.com/users")
-   const data=await res.json();
+//   const res =await fetch("https://jsonplaceholder.typicode.com/users")
+//    const data=await res.json();
    
-   console.log("Fetching user Data...\n");
+//    console.log("Fetching user Data...\n");
 
 
-         for(const user of data){
+//          for(const user of data){
 
 
-        console.log(`Name : ${user.name}`)
-        await delay(1000);
-        console.log(`Email: ${user.email}`)
-        await delay(3000);
-        console.log(`Phone: ${user.phone}`)
-        console.log("---------------------------")
+//         console.log(`Name : ${user.name}`)
+//         await delay(1000);
+//         console.log(`Email: ${user.email}`)
+//         await delay(2000);
+//         console.log(`Phone: ${user.phone}`)
+//         console.log("---------------------------")
 
-         }
+//          }
 
        
     
   
-   console.log("All user Printed successFully")
+//    console.log("All user Printed successFully")
 
-   } catch (error) {
-      console.log("Error ",error)
-   } 
-}
+//    } catch (error) {
+//       console.log("Error ",error)
+//    } 
+// }
 
-GetUserData()
+// GetUserData()
