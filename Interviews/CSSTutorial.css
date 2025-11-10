@@ -1,0 +1,144 @@
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG3lbAjNunbTZUnn9Os8uhXf-MaE3FKxuq2TCtjw8SOyxYRib1i3A3exmMCeYUjBzhxCE&usqp=CAU");
+
+  /* 
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Q12VzuNm_xEKGoL7ChO8DoaFabNpo9yAyw&s"); */
+
+} 
+
+
+div {
+  background-color: green;
+}
+
+div.first {
+  opacity: 0.1;
+}
+
+div.second {
+  opacity: 0.3;
+}
+
+div.third {
+  opacity: 0.6;
+}
+p.dotted {
+    border-style: dotted;
+    border-color: rgb(211, 201, 203);
+    background-color: crimson;
+    text-align: center;
+    /* border-width: 30px; */
+    
+}
+p.dashed{
+    border-style:dashed;
+     border-color: rgb(211, 201, 203);
+    background-color: crimson;
+    text-align: center;
+    /* border-width: 30px; */
+    
+}
+p.solid{
+    border-style: solid;
+      border-color: rgb(211, 201, 203);
+    background-color: crimson;
+    text-align: center;
+
+}
+p.double{
+    border-style: double;
+      border-color: rgb(211, 201, 203);
+    background-color: crimson;
+    text-align: center;
+}
+p.groove{
+    border-style: groove;
+      border-color: rgb(211, 201, 203);
+    background-color: crimson;
+    text-align: center;
+
+}
+p.ridge{
+    border-style: ridge;
+      border-color: rgb(211, 201, 203);
+    background-color: crimson;
+    text-align: center;
+}
+p.inset{
+    border-style: inset;
+      border-color: rgb(211, 201, 203);
+    background-color: crimson;
+    text-align: center;
+}
+p.outset{
+    border-style: outset;
+      border-color: rgb(211, 201, 203);
+    background-color: crimson;
+    text-align: center;
+}
+p.none{
+    border-style: none;
+      border-color: rgb(211, 201, 203);
+    background-color: crimson;
+    text-align: center;
+}
+p.hidden{
+    border-style: hidden;
+      border-color: rgb(211, 201, 203);
+    background-color: crimson;
+    text-align: center;
+}
+p.mix{
+    border-style: dashed dotted double;
+      border-color: rgb(211, 201, 203);
+    background-color: crimson;
+    text-align: center;
+}
+.margin{
+    border: 1px solid #750f0f;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.padinggg{
+    padding: 100px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+
+}
+.BoxModel{
+      background-color: lightgrey;
+  width: 300px;
+  border: 15px solid rgb(85, 98, 189);
+  padding: 50px;
+  margin: 20px;
+}
+.shadow{
+    text-align: center;
+    text-shadow: 2px 20px #750f0f;
+    color: #750f0f;
+}
+.animation{
+     width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: width 2s;
+}
+.animation:hover{
+      width: 100%;
+}
+.animation1 {
+    width: 100px;
+    height: 100px;
+    background-color: #750f0f;
+      transition: width 2s, height 4s, background-color 3s;
+}
+.animation1:hover{
+    width: 300px;
+  height: 300px;
+  background-color: orange;
+}
