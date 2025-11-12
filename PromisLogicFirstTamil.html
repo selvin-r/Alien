@@ -4,53 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+      body{
+        background-color:darkmagenta;
+      }
+    </style>
 </head>
 <body>
-    <script>
-     // 1
+
+  <h1>Promise Function </h1>
+    <script> 
+     // 1 ==============================================================
 
 
-//         function tatkalBook() {
-//   return new Promise((resolve, reject) => {
-//     let bookingSuccess = true;
+        function tatkalBook() {
+  return new Promise((resolve, reject) => {
+    let bookingSuccess = true;
 
-//     if (bookingSuccess) {
-//       resolve(900);
-//     } else {
-//       reject();
-//     }
-//   });
-// }
+    if (bookingSuccess) {
+      resolve(900);
+    } else {
+      reject();
+    }
+  });
+}
 
-// tatkalBook()
-//   .then((amt) => console.log(`Thanks buddy! I have Transferred ${amt}`))
-//   .catch(() => console.log("Thanks for trying! I will Book a Bus"));
+tatkalBook()
+  .then((amt) => console.log(`Thanks buddy! I have Transferred ${amt}`))
+  .catch(() => console.log("Thanks for trying! I will Book a Bus"));
 
-// // 2
+// // 2=======================================================================================
 
-//   function tosscoin(){
+  function tosscoin(){
 
-//     return new Promise((resolve,reject)=>{
+    return new Promise((resolve,reject)=>{
 
-//         let toss=Math.floor(Math.random()*2)
+        let toss=Math.floor(Math.random()*2)
 
-//         if(toss==0){
-//             resolve();
-//         } else {
-//             reject();
-//         }
-//     })
-//   }
-
-
-//   tosscoin()
-//   .then(()=>console.log("You Win !!"))
-//   .catch(()=>console.log("Sorry You loss !!"))
+        if(toss==0){
+            resolve();
+        } else {
+            reject();
+        }
+    })
+  }
 
 
+  tosscoin()
+  .then(()=>console.log("You Win !!"))
+  .catch(()=>console.log("Sorry You loss !!"))
 
 
-  // 3 
+
+
+  // 3 =============================================================================
 
 
   let reachedA = new Promise((resolve,reject)=>{
@@ -69,43 +77,43 @@
   })
 
 
-//     let reachedB = new Promise((resolve,reject)=>{
+    let reachedB = new Promise((resolve,reject)=>{
 
-//     let reached = true;
+    let reached = true;
 
 
-//     if(reached){
+    if(reached){
         
-//         setTimeout(resolve,1000,"Anitha Reached")
+        setTimeout(resolve,1000,"Anitha Reached")
     
-//     } else {
-//         reject("Anitha Not Reached ")
-//     }
+    } else {
+        reject("Anitha Not Reached ")
+    }
 
-//   })
-//     let reachedC = new Promise((resolve,reject)=>{
+  })
+    let reachedC = new Promise((resolve,reject)=>{
 
-//     let reached = true;
+    let reached = true;
 
 
-//     if(reached){
+    if(reached){
         
-//         setTimeout(resolve,2000,"Mary Reached")
+        setTimeout(resolve,2000,"Mary Reached")
     
-//     } else {
-//         reject("Mary Not Reached ")
-//     }
+    } else {
+        reject("Mary Not Reached ")
+    }
 
-//   })
-
-
-//   Promise.race([reachedA,reachedB,reachedC])
-//   .then((mes)=>console.log(mes))
-//   .catch((mes)=>console.log(mes))
+  })
 
 
+  Promise.race([reachedA,reachedB,reachedC])
+  .then((mes)=>console.log(mes))
+  .catch((mes)=>console.log(mes))
 
-  // 4 Async Await 
+
+
+  // 4 Async Await ========================================================================================
 
 
   async function asname() {

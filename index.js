@@ -1,58 +1,58 @@
-// // Given data
-// var obj = {
-//   '208997987399': ['208997987399', '208997987377', '6', '1'],
-//   '208997987397': ['208997987397', '208997987377', '3', '10'],
-//   '2089979448417': ['2089979448417', '2089979448363', '3', '20'],
-//   '2085415402309': ['2085415402309', '2085414022965', '2', '30'],
-//   '208997987395': ['208997987395', '208997987377', '2', '40']
-// };
+// Given data
+var obj = {
+  '208997987399': ['208997987399', '208997987377', '6', '1'],
+  '208997987397': ['208997987397', '208997987377', '3', '10'],
+  '2089979448417': ['2089979448417', '2089979448363', '3', '20'],
+  '2085415402309': ['2085415402309', '2085414022965', '2', '30'],
+  '208997987395': ['208997987395', '208997987377', '2', '40']
+};
 
-// var names = {
-//   '208997987399': 'show_otp_dialog',
-//   '208997987397': 'add_vendor_bank_account',
-//   '2089979448417': 'print_pdf',
-//   '2085415402309': 'test_event_dho',
-//   '208997987395': 'country_code_change'
-// };
+var names = {
+  '208997987399': 'show_otp_dialog',
+  '208997987397': 'add_vendor_bank_account',
+  '2089979448417': 'print_pdf',
+  '2085415402309': 'test_event_dho',
+  '208997987395': 'country_code_change'
+};
 
-// var groupnames = {
-//   '208997987377': 'Payments',
-//   '2089979448363': 'Bills',
-//   '2085414022965': 'test_group_ek',
-//   '208997987395': 'Paid'
-// };
+var groupnames = {
+  '208997987377': 'Payments',
+  '2089979448363': 'Bills',
+  '2085414022965': 'test_group_ek',
+  '208997987395': 'Paid'
+};
 
-// var platform = {
-//   '1': 'Windows',
-//   '2': 'Android',
-//   '3': 'tvOS',
-//   '4': 'macOS',
-//   '5': 'watchOS',
-//   '6': 'iOS'
-// };
+var platform = {
+  '1': 'Windows',
+  '2': 'Android',
+  '3': 'tvOS',
+  '4': 'macOS',
+  '5': 'watchOS',
+  '6': 'iOS'
+};
 
-// // Now combine all into one table structure
-// var finalOutput = [];
+// Now combine all into one table structure
+var finalOutput = [];
 
-// for (var key in obj) {
-//   let details = obj[key];
-//   let id = details[0];
-//   let groupId = details[1];
-//   let platformId = details[2];
-//   let count = details[3];
+for (var key in obj) {
+  let details = obj[key];
+  let id = details[0];
+  let groupId = details[1];
+  let platformId = details[2];
+  let count = details[3];
 
-//   finalOutput.push({
-//     ID: id,
-//     Name: names[key],
-//     'Group Name': groupnames[groupId],
-//     Platform: platform[platformId],
-//     Count: count
+  finalOutput.push({
+    ID: id,
+    Name: names[key],
+    'Group Name': groupnames[groupId],
+    Platform: platform[platformId],
+    Count: count
     
-//   });
-// }
+  });
+}
 
-// // Display as table in console
-// console.table(finalOutput);
+// Display as table in console
+console.table(finalOutput);
 
 
 

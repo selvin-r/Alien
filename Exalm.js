@@ -92,16 +92,16 @@ let arr = [1, 2, 3, 4, 5];
 // One Way 
 
 
-// function Revers(str){
+function Revers(str){
 
-//     let word =str.split(" ");
+    let word =str.split(" ");
 
-//     let res =word.reverse();
+    let res =word.reverse();
 
-//     return res.join(" ");
-// }
+    return res.join(" ");
+}
 
-// console.log(Revers("The quick brown fox"));
+console.log(Revers("The quick brown fox"));
 
 
 
@@ -146,8 +146,8 @@ let arr = [1, 2, 3, 4, 5];
 // 🌟 METHOD 5 — Using reduce() ⚙️ (Functional Style)
 
 
-// function reverseWords(str) {
-//   return str.split(" ").reduce((acc, word) => word + " " + acc).trim();
-// }
+function reverseWords(str) {
+  return str.split(" ").reduce((acc, word) => word + " " + acc).trim();
+}
 
-// console.log(reverseWords("The quick brown fox"));
+console.log(reverseWords("The quick brown fox"));
