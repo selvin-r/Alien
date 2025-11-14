@@ -49,7 +49,7 @@
 
 
 
-// 4) Common URL/query serializations in JS =====================================================================================
+// 4 Common URL/query serializations in JS =====================================================================================
 
 // function toQueryString(obj) {
 //   return Object.keys(obj)
@@ -85,26 +85,26 @@
 // console.log(fullURL);
 
 
-function toQueryString(params) {
-  return Object.entries(params)
-    .map(([key, value]) => 
-      `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
-    )
-    .join('&');
-}
+// function toQueryString(params) {
+//   return Object.entries(params)
+//     .map(([key, value]) => 
+//       `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+//     )
+//     .join('&');
+// }
 
-const user = {
-  name: 'Darling',
-  course: 'Big Data Fundamentals',
-  level: 'Beginner',
-  age:   '22'
-};
+// const user = {
+//   name: 'Darling',
+//   course: 'Big Data Fundamentals',
+//   level: 'Beginner',
+//   age:   '22'
+// };
 
-const query = toQueryString(user);
-console.log(query);
+// const query = toQueryString(user);
+// console.log(query);
 
 
-const url = `https://school-api.com/enroll?${query}`;
-console.log(url);
+// const url = `https://school-api.com/enroll?${query}`;
+// console.log(url);
 
 

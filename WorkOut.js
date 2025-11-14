@@ -224,3 +224,65 @@ function sumofNumber(){
 
 let sums =[3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9];
 console.log(sumofNumber(sums));
+
+
+
+
+// Qure String ===================================================================================
+
+
+
+function QureyString(){
+  // query = query.replace("?", "");
+  
+ let obj ={};
+
+ query.split('&').forEach(par => {
+
+    const [key ,value]=par.split('=');
+
+    obj[key]=value;
+ });
+
+ return obj;
+
+}
+
+let query = "?name=Darling&age=22&city=Tirunelveli";
+
+console.log(QureyString(query))
+
+
+
+
+//SpreadOperator 
+
+
+
+
+const a =[1,1,1,1,1];
+const b =[2,2,2,2];
+
+const clone =[...a,...b];
+console.log( "Clone A Array",clone)
+
+
+// Object Clone ====
+
+
+
+const user = { name: "Darling", age: 22,place: "Ooty" };
+
+const c ={...user};
+console.log(c)
+
+
+/// Function Call 
+
+
+function add (a,b,c){
+
+  return a+b+c;
+}
+const e =[1,2,3];
+console.log(add(...e)) 
