@@ -31,35 +31,35 @@
 // Example 3 — Async with Fetch API (Print Data) ===========================================================================================
 
 
-async function Printdata() {
+// async function Printdata() {
 
-try {
+// try {
 
-     const res=await fetch("https://jsonplaceholder.typicode.com/users")
+//      const res=await fetch("https://jsonplaceholder.typicode.com/users")
 
-    const data = await res.json();
+//     const data = await res.json();
 
-    data.forEach((element)=> {
-        console.log(`User id ${element.id}`);
-        console.log("Name",element.name)
-        console.log("Email ",element.email);
-        console.log("Address",element.address);
-        console.log("Phone ",element.phone);
-        console.log("Wibsite Name" ,element.website);
-        console.log("Company " ,element.company)
+//     data.forEach((element)=> {
+//         console.log(`User id ${element.id}`);
+//         console.log("Name",element.name)
+//         console.log("Email ",element.email);
+//         console.log("Address",element.address);
+//         console.log("Phone ",element.phone);
+//         console.log("Wibsite Name" ,element.website);
+//         console.log("Company " ,element.company)
 
         
-    });
+//     });
 
     
-} catch (error) {
-    console.log(error)
-}
+// } catch (error) {
+//     console.log(error)
+// }
    
     
-}
+// }
 
-Printdata() 
+// Printdata() 
 
 
 
@@ -157,3 +157,72 @@ Printdata()
 // }
 
 // GetUserData()
+
+
+/// Demo Wokr 
+
+// let x=10;
+
+// x="hello";
+
+// x=true;
+// x="hello";
+// console.log(x);
+
+
+// function gree(name){
+
+//   return "hello" + name;
+// }
+
+// let welcome = gree;
+
+// console.log(welcome("Darling"))
+
+
+// async function getUser() {
+//   let res = await fetch("https://jsonplaceholder.typicode.com/users/1");
+//   let data = await res.json();
+//   console.log(data.name);
+// }
+
+// getUser();
+
+
+// How to Shuffle an Array in Java (Simple Explanation)========================================================
+
+
+function Shuffle(){
+
+  for(let i=arr.length-1;i>=0;i--){
+  
+    let j =Math.floor(Math.random()*(i+1));
+
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+
+  }
+
+  return arr;
+}
+
+let arr =[1,2,3,34,5,5,6,7,7,5,4,3]
+console.log(Shuffle(arr))
+
+
+
+
+
+/// Method 2: Using sort() (Not perfect, but easy)
+
+
+
+function Other(){
+
+  return arrr.sort(()=>Math.random() -0.5 );  
+}
+
+let arrr= [1,2,3,4,5,5,6,6];
+
+console.log(Other(arrr))
+
+
